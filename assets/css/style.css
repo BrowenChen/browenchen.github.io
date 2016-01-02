@@ -115,11 +115,18 @@
 	}
 	.feature-pic {
 		/*border: 1px solid yellow;*/
-		border: 2px solid white;
-		border-radius: 2px;
-		box-shadow: 1px 1px 1px rgb(136, 136, 136);
+		/*border: 2px solid white;*/
+		/*border-radius: 2px;*/
+		/*box-shadow: 1px 1px 1px rgb(136, 136, 136);*/
 		height: 100%;
 		width: 100%;
+
+	}
+
+	.test { 
+		height: 100%;
+		width: 100%;
+		border: 1px solid green;
 	}
 
 	.no-border {
@@ -494,5 +501,10 @@
 		padding: 10px;
 		padding-top: 30px;			
 
+	}
+
+	.features section {
+		position: relative;
+		padding: 0;
 	}
 
