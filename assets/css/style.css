@@ -190,6 +190,7 @@
 		width: 69%;
 		height: 100%;
 		right: 0;
+
 		/*border: 1px solid green;*/
 
 	}
@@ -345,19 +346,19 @@
 
 	.gig-whole-container {
 		position: relative;
-		box-shadow: 0px 0px 2px black;
+		/*box-shadow: 0px 0px 2px black;*/
+		box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
 		width: 65%;
 		margin: 0 auto;
 		border: 1px solid #5991B1;
 		
-		border-radius: 4px;
+		border-radius: 3px;
 		opacity: .81;
 
 	}
 
 	.gig-header {
 		position: relative;
-		/*border: 1px solid #5991B1;*/
 		border-bottom: 1px solid #444B54;
 		width: 100%;
 		margin: 0 auto;
@@ -516,5 +517,58 @@
 	.features section {
 		position: relative;
 		padding: 0;
+	}
+
+
+
+	/*Tech section media query*/
+
+	@media screen and (max-width: 1000px) {
+		.icon-section {
+			display: none;
+		}
+
+		.text-section {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		.code-head {
+			font-size: 140%;
+		}
+
+		.tech-intro-text {
+			font-size: 95%;
+			overflow: scroll;
+			padding-top: 10px;
+		}
+	}
+
+
+	/*Gig section media Query*/
+	@media screen and (max-width: 1000px) {
+		.gig-icon {
+			width: 55px;
+			height: 55px;
+		}
+		.gig-header {
+			padding-top: 8px;
+		}
+		.gig-header h4 {
+			font-size: 125%;
+		}
+
+		.gig-title { 
+			font-size: 100%;
+			padding: 13px;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+		.gig-title { 
+			font-size: 90%;
+			padding: 8px;
+		}
 	}
 
