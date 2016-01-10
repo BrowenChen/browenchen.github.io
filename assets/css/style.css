@@ -342,7 +342,42 @@
 		font-size: 18px;
 		text-align: center;
 		line-height: 175%;
-	}			
+	}	
+
+
+
+	
+	.twitter-gig-container {
+		border: 1px solid green;
+		height: 520px;
+		margin-top: 10px;
+	}
+
+	.col1 {
+		width: 50%;
+		float: left;
+		/*border: 1px solid yellow;*/
+	}
+
+	.col2 {
+		width: 50%;
+		float: right;
+		/*border: 1px solid yellow;*/
+	}
+
+	.twitter-container {
+		/*border: 5px solid green;*/
+		width: 90%;
+		position: relative;
+		margin: 0 auto;
+		opacity: .91;
+		
+	}
+
+
+
+
+
 
 	.gig-whole-container {
 		position: relative;
@@ -351,7 +386,6 @@
 		width: 90%;
 		margin: 0 auto;
 		border: 1px solid #5991B1;
-		
 		border-radius: 3px;
 		opacity: .81;
 
@@ -398,6 +432,7 @@
 		width: 100%;
 		/*background-color: #00587A;*/
 		background-color: #FFFFF7;
+		background-color: white;
 		/*border-top-left-radius: 8px;*/
 		/*border-top-right-radius: 8px;*/
 		/*border-bottom-left-radius: 4px;*/
@@ -569,6 +604,37 @@
 		.gig-title { 
 			font-size: 90%;
 			padding: 8px;
+		}
+	}
+
+	/*Gig Twitter section columns*/
+	@media screen and (max-width: 1000px) {
+		.twitter-gig-container {
+			height: 850px;
+			border: 1px solid red;
+		}
+
+		.col1 {
+			width: 100%;
+			float: none;
+			background-color: yellow;
+		}
+
+		.col2 {
+			width: 100%;
+			float: none;
+		}
+
+		.gig-whole-container {
+			width: 65%;
+		}
+
+		#gigs {
+
+		}
+
+		.twitter-container {
+			width: 65%;
 		}
 	}
 
