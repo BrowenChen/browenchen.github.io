@@ -63,6 +63,9 @@
 		width: 100%;
 	}
 
+	.side-section {
+		display: none;
+	}
 
 	/*Avatar Subheading*/
 	#nameAv {
@@ -343,12 +346,8 @@
 		text-align: center;
 		line-height: 175%;
 	}	
-
-
-
 	
 	.twitter-gig-container {
-		border: 1px solid green;
 		height: 520px;
 		margin-top: 10px;
 	}
@@ -558,7 +557,11 @@
 
 	/*Tech section media query*/
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 1010px) {
+		.side-section {
+			display: block;
+		}
+
 		.icon-section {
 			display: none;
 		}
@@ -601,8 +604,12 @@
 	}
 
 	@media screen and (max-width: 736px) {
+		.gig-header h4 {
+			font-size: 105%;
+		}
+
 		.gig-title { 
-			font-size: 90%;
+			font-size: 85%;
 			padding: 8px;
 		}
 	}
@@ -611,18 +618,17 @@
 	@media screen and (max-width: 1000px) {
 		.twitter-gig-container {
 			height: 850px;
-			border: 1px solid red;
 		}
 
 		.col1 {
 			width: 100%;
 			float: none;
-			background-color: yellow;
 		}
 
 		.col2 {
 			width: 100%;
 			float: none;
+			height: 350px;
 		}
 
 		.gig-whole-container {
@@ -634,7 +640,15 @@
 		}
 
 		.twitter-container {
+			margin-top: 15px;
 			width: 65%;
 		}
+
+		.twitter-timeline {
+			height: 350px;
+			max-height: 350px;
+		}
+
+
 	}
 
