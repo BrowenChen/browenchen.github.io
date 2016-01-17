@@ -2114,6 +2114,38 @@
 				opacity: 1;
 			}
 
+			/*Latest Featured Video*/
+			.latest-featured {
+				-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
+				-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+				-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
+				transition: opacity 0.5s ease, transform 0.5s ease;
+				-moz-transition-delay: 1s;
+				-webkit-transition-delay: 1s;
+				-ms-transition-delay: 1s;
+				transition-delay: 1s;
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+				position: absolute;
+				opacity: 1;				
+			}
+
+			.latest-featured {
+				-moz-transition-delay: 1.05s;
+				-webkit-transition-delay: 1.05s;
+				-ms-transition-delay: 1.05s;
+				transition-delay: 1.05s;
+			}
+
+			.latest-featured.inactive {
+				-moz-transform: scale(0.5);
+				-webkit-transform: scale(0.5);
+				-ms-transform: scale(0.5);
+				transform: scale(0.5);
+				opacity: 0;
+			}			
 
 			.features section:nth-child(1) .feature-pic {
 				-moz-transition-delay: 0.15s;
@@ -3971,5 +4003,34 @@
 			#intro {
 				background-attachment: scroll;
 			}
-
 		}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+/*Disable animations*/
+/*CSS transitions*/
+/** {
+-o-transition-property: none !important;
+-moz-transition-property: none !important;
+-ms-transition-property: none !important;
+-webkit-transition-property: none !important;
+transition-property: none !important;
+*//*CSS transforms*/
+/*-o-transform: none !important;
+-moz-transform: none !important;
+-ms-transform: none !important;
+-webkit-transform: none !important;
+transform: none !important;
+*//*CSS animations*/
+/*-webkit-animation: none !important;
+-moz-animation: none !important;
+-o-animation: none !important;
+-ms-animation: none !important;
+animation: none !important;
+}*/
