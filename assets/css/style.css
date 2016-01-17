@@ -629,6 +629,16 @@
 			width: 90%;
 
 		}
+		
+		.code-head{
+			margin-bottom: 1px;
+		}
+
+		.tech-intro-text {
+			padding: 5px;
+			font-size: 12px;
+			padding-bottom: 10px;
+		}
 	}
 
 	/*Gig Twitter section columns*/
