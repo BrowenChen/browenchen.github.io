@@ -2133,10 +2133,10 @@
 			}
 
 			.latest-featured {
-				-moz-transition-delay: 1.05s;
-				-webkit-transition-delay: 1.05s;
-				-ms-transition-delay: 1.05s;
-				transition-delay: 1.05s;
+				-moz-transition-delay: .85s;
+				-webkit-transition-delay: .85s;
+				-ms-transition-delay: .85s;
+				transition-delay: .85s;
 			}
 
 			.latest-featured.inactive {
