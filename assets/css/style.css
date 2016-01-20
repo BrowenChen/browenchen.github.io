@@ -729,3 +729,17 @@
 			width: 100%;
 		}
 	}
+
+
+
+	/*No anitmation for mobile sizes*/
+	@media screen and (max-width: 480px) {
+		div, .notransition {
+		  -webkit-transition: none !important;
+		  -moz-transition: none !important;
+		  -o-transition: none !important;
+		  -ms-transition: none !important;
+		  transition: none !important;
+		}
+
+	}
