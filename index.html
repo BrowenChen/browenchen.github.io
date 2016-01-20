@@ -21,15 +21,23 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-		 jQuery library 
+		 <!-- jQuery library  -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-beta.1/handlebars.runtime.min.js"></script>
+
+		<!-- instashow -->
+		<link href="assets/js/instashow/jquery.instashow.min.css" rel="stylesheet">
+		<script src="assets/js/instashow/jquery.instashow.min.js"></script>
 
 		<!-- Latest compiled JavaScript
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		 -->
 
 
+
+		<script src="http://www.powr.io/powr.js" powr-token="5431e65cb1" external-type="html"></script>
 
 	</head>
 	<body>
@@ -251,7 +259,7 @@
 							// </script>
 							-->
 
-							
+
 							<!-- <ul class="actions">
 								<li><a href="#" class="button">Learn more</a></li>
 							</ul> -->
@@ -774,17 +782,125 @@
 					
 
 								</div>								
-
-
-
-
 							</div>
 
 
 							<br>
 							<br>
 							<br>
+
+
+<style>
+
+	.insta-c {
+		opacity: .9;
+		max-height: 460px;
+	}
+
+	.insta-mid {
+		text-align: center;
+	}
+
+	#insta-icon {
+		height: 30px;
+		width: 30px;
+		margin: 0 auto;
+		opacity: .9;
+		border-radius: 50px;
+	}
+
+	#insta-icon:hover {
+		cursor: pointer;
+		opacity: .8;
+	}
+
+	.insta-container {
+
+		border:0; 
+		border-radius: 5px; 
+		box-shadow:0 1px 2px 0 rgba(0,0,0,0.5),0 3px 10px 0 rgba(0,0,0,0.15); 
+		margin: 5px; 
+		margin-top: 13px;
+		padding:0; 
+		opacity: .85;
+	}
+
+	.my-instashow {
+
+	}
+
+
+	#username {
+		color: #1c5380;
+		font-weight: bold;
+		font-size: .75em;
+		margin-left: 5px;
+		font-style: normal;
+	}
+
+	#username:hover {
+		cursor: pointer;
+	}
+
+	#username:visited {
+		color: #3f729b;
+	}
+	
+	#insta-words {
+		height: 20px;
+		float: right;
+		margin-top: 3px;
+	}
+
+</style>
+
+<div class="insta-c">
+	<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" position: relative; background:#FFF; border:0; border-radius:5px; box-shadow:0 0 2px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);  margin: 0 auto; margin-top: -5px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); max-height: 450px;"><div style="padding:8px;"> 
+		<header class="insta-header" style="padding-top: 0px;">
+			<span> <img id="insta-icon" src="images/instaAvt.jpg"></span> <span> <a id="username" target="_blank" href="http://instagram.com/owenchenmusic"> owenchenmusic </a></span> <span id="insta-words"> <img id="insta-words" src="images/instag.png"> </span>
+		<header>
+
+		<div style=" background:#F8F8F8; position: relative; line-height:0; margin-top:10px; padding:0.0% 0; text-align:center; width:100%;"> 
+			<div class="my-instashow insta"> </div>	
+		</div> 
+
+		<p style=" margin:8px 0 0 0; padding:0 4px;"> 
+		</p> 
+
+		<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Instagram videos posted by Owen Chen (@owenchenmusic) </p></div>
+	</blockquote>
+</div>
+
+<script async defer src="http://platform.instagram.com/en_US/embeds.js"></script>
+<script>
+    $('.my-instashow').instaShow({
+        accessToken: '2075097003.745c638.2dfbfaf16997430798cb99b537725ad6',
+        source: '@owenchenmusic',
+        width: 'auto',
+        height: '350px',
+        columns: 3,
+        rows: 2,
+        direction: 'vertical',
+        lang: 'en',
+        popupInfo: '',
+        scrollbar: false,
+        arrowsControl: false,
+        opacity: .9,
+        gutter: 10,
+        // colorGalleryBg: '#1E8BC3',
+        colorGalleryBg: 'transparent',
+        responsive: { "1000": { "columns": 3, "rows": 2, "limit": 3 },
+        				"600": {"columns": 2, "rows": 2, "limit": 2},
+        				"400": {"columns": 1, "rows": 2, "limit": 1}
+    	},
+        limit: 8
+    });
+</script>
+
+</div>
+
 <!-- 
+
 							<div class="gig-whole-container animated fadeIn">
 								<header class="gig-header">
 									<h4 style="margin: 0;"> <span> <img class="gig-icon" src="images/bubble.png"\> </span> Recent Gigs  </h4>
@@ -1359,9 +1475,22 @@
 							<br>
 							<br>
 							I enjoy reading and reflecting on topics in philosophy, neuroscience, cognitive science, nutritional science, music cognition, sociology, psychology, machine learning, and cognitive technology. I also intend to create educational resources for jazz harmony, guitar, programming, sound design, and music production in the upcoming future. Stay tuned! 
-							</p>	
+							</p>
 
 
+
+
+
+
+
+							<!--	
+
+							<style>.embed-container {position: relative; padding-bottom: 120%; height: 0; overflow: hidden;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.instagram.com/p/BAoex39H1F9/embed/' frameborder='0' scrolling='no' allowtransparency='true'></iframe></div>
+
+						-->
+
+
+					
 
 					<!-- 	<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BAKtIgxn1JQ/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Berkeley nu jazz collective - theme for Odwalla #jazzfusion #guitar #wampler #dualfusion #telecaster #pickupjazz #fender #laney</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Owen Chen (@owenchenmusic) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-01-05T18:23:02+00:00">Jan 5, 2016 at 10:23am PST</time></p></div></blockquote> -->
 <!-- <script async defer src="//platform.instagram.com/en_US/embeds.js"></script> -->
@@ -1391,8 +1520,6 @@
   </div>
 </div>
  -->
-
-
 							<!-- < ul class="actions">
 								<li><a href="#" class="button">Learn more</a></li>
 							</ul> -->
