@@ -647,35 +647,7 @@
 		}
 	}
 
-	@media screen and (max-width: 736px) {
-		.gig-header h4 {
-			font-size: 105%;
-		}
 
-		.gig-title { 
-			font-size: 85%;
-			padding: 8px;
-		}
-
-		.gig-whole-container {
-			width: 90%;
-		}
-
-		.twitter-container {
-			width: 90%;
-
-		}
-		
-		.code-head{
-			margin-bottom: 1px;
-		}
-
-		.tech-intro-text {
-			padding: 5px;
-			font-size: 12px;
-			padding-bottom: 10px;
-		}
-	}
 
 
 	/*Gig Twitter section columns*/
@@ -736,6 +708,37 @@
 			width: 100%;
 		}
 	}
+
+
+	@media screen and (max-width: 736px) {
+		.gig-header h4 {
+			font-size: 105%;
+		}
+
+		.gig-title { 
+			font-size: 85%;
+			padding: 8px;
+		}
+
+		.gig-whole-container {
+			width: 100%;
+		}
+
+		.twitter-container {
+			width: 100%;
+
+		}
+		
+		.code-head{
+			margin-bottom: 1px;
+		}
+
+		.tech-intro-text {
+			padding: 5px;
+			font-size: 12px;
+			padding-bottom: 10px;
+		}
+	}	
 
 
 
