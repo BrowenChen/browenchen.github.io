@@ -647,9 +647,6 @@
 		}
 	}
 
-
-
-
 	/*Gig Twitter section columns*/
 	@media screen and (max-width: 1000px) {
 		.twitter-gig-container {
@@ -721,12 +718,11 @@
 		}
 
 		.gig-whole-container {
-			width: 100%;
+			width: 80%;
 		}
 
 		.twitter-container {
-			width: 100%;
-
+			width: 80%;
 		}
 		
 		.code-head{
@@ -738,8 +734,20 @@
 			font-size: 12px;
 			padding-bottom: 10px;
 		}
-	}	
+	}
 
+
+	@media screen and (max-width: 600px) {
+
+		.gig-whole-container {
+			width: 100%;
+		}
+
+		.twitter-container {
+			width: 100%;
+		}
+
+	}
 
 
 	/*No anitmation for mobile sizes*/
