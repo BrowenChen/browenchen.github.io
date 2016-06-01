@@ -30,12 +30,16 @@
 		 <!-- jQuery library  -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-beta.1/handlebars.runtime.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
+		 
+		<link href="instashow/jquery.instashow.min.css" rel="stylesheet">
+		<script src="instashow/jquery.instashow.min.js"></script>		
 
-		<!-- instashow -->
+		<!-- instashow 
 		<link href="assets/js/instashow/jquery.instashow.min.css" rel="stylesheet">
 		<script src="assets/js/instashow/jquery.instashow.min.js"></script>
+		-->
 
 		<!-- Latest compiled JavaScript
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -168,13 +172,38 @@
 									<header>
 
 									<div style=" background:#F8F8F8; position: relative; line-height:0; margin-top:10px; padding:0.0% 0; text-align:center; width:100%;"> 
-										<div class="my-instashow insta"> </div>	
+
+										<style> 
+											#instashow-data {
+												position: relative;	
+												height: 100%;
+												overflow: hidden;
+											}
+
+											.my-instashow {
+												position: relative;
+												height: 100%;
+											}
+
+										</style>
+										<div class="my-instashow insta"> 
+											<div id="instashow-data" data-is data-is-access-token="2075097003.75bfadb.4273e588369742d6a3817c9f1d0152be" data-is-responsive='{ "1500": {"columns": 3, "rows": 2}, "1000": { "columns": 3, "rows": 1}, "600": {"columns": 2, "rows": 1}, "400": {"columns": 1, "rows": 1}}' ></div>
+										</div>	
 									</div> 
+
+<!-- 
+/        	responsive: { "1000": { "columns": 3, "rows": 2, "limit": 3 },
+			 //        				"600": {"columns": 2, "rows": 2, "limit": 2},
+			 //        				"400": {"columns": 1, "rows": 2, "limit": 1}
+			 //    			}, -->
+
+
+
 
 									<p style=" margin:8px 0 0 0; padding:0 4px;"> 
 									</p> 
 
-									<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Instagram videos posted by Owen Chen (@owenchenmusic) </p></div>
+									<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Latest 20 Instagram videos posted by Owen Chen (@owenchenmusic) </p></div>
 								</blockquote>
 							</div>
 						  </div>
@@ -1509,30 +1538,62 @@
 		<!-- Javascript Code -->
 						<!-- <script async defer src="http://platform.instagram.com/en_US/embeds.js"></script> -->
 			<script>
-			    $('.my-instashow').instaShow({
-			        accessToken: '2075097003.745c638.ef4e0bd32fa346b6aec151dfb0dd8982',
-			        source: '@owenchenmusic',
-			        width: 'auto',
-			        height: '350px',
-			        columns: 3,
-			        rows: 2,
-			        direction: 'vertical',
-			        lang: 'en',
-			        popupInfo: '',
-			        scrollbar: false,
-			        arrowsControl: false,
-			        opacity: .9,
-			        gutter: 10,
-			        // colorGalleryBg: '#1E8BC3',
-			        colorGalleryBg: 'transparent',
-			        responsive: { "1000": { "columns": 3, "rows": 2, "limit": 3 },
-			        				"600": {"columns": 2, "rows": 2, "limit": 2},
-			        				"400": {"columns": 1, "rows": 2, "limit": 1}
-			    	},
-			        limit: 16
-			    });
 
 
+
+
+				// $(window).on('instaShowReady', function() {
+				// 	alert("Test");
+				// 	$('.my-instashow').instaShow({
+			 //            api: 'instashow/api/',
+				// 		accessToken: '2075097003.75bfadb.4273e588369742d6a3817c9f1d0152be',
+			 //            source: '@owenchenmusic',
+			 //            width: 'auto',
+			 //            height: '500px',
+			 //            columns: 3,
+			 //            rows: 2,
+			 //            direction: 'vertical',
+			 //            lang: 'en',
+			 //            popupInfo: '',	
+			 //            scrollbar: false,
+				// 		arrowsControl: false,
+				// 		opacity: .9,		
+				// 		gutter: 10,
+			 //        	colorGalleryBg: 'transparent',
+			 //        	responsive: { "1000": { "columns": 3, "rows": 2, "limit": 3 },
+			 //        				"600": {"columns": 2, "rows": 2, "limit": 2},
+			 //        				"400": {"columns": 1, "rows": 2, "limit": 1}
+			 //    			},
+				// 		limit: 16
+				// 	});
+				// });	
+
+		
+			 //    $('my-instashow').instaShow({
+				// 	api: '/instashow/api/',
+				// 	accessToken: '2075097003.75bfadb.4273e588369742d6a3817c9f1d0152be',
+			 //        source: '@owenchenmusic',
+			 //        width: 'auto',
+			 //        height: '350px',
+			 //        columns: 3,
+			 //        rows: 2,
+			 //        direction: 'vertical',
+			 //        lang: 'en',
+			 //        popupInfo: '',
+			 //        scrollbar: false,
+			 //        arrowsControl: false,
+			 //        opacity: .9,
+			 //        gutter: 10,
+			 //        // colorGalleryBg: '#1E8BC3',
+			 //        colorGalleryBg: 'transparent',
+			 //        responsive: { "1000": { "columns": 3, "rows": 2, "limit": 3 },
+			 //        				"600": {"columns": 2, "rows": 2, "limit": 2},
+			 //        				"400": {"columns": 1, "rows": 2, "limit": 1}
+			 //    	},
+			 //        limit: 16
+			 //    });
+
+			    
 				var fired = false;
 				window.onscroll = function() {
 					if (!fired) {
