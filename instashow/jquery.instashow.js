@@ -97,7 +97,7 @@ var Core = function ($element, options, id) {
     self.initialize();
 };
 $.extend(Core, {
-    VERSION: '2.0.1 June',
+    VERSION: '2.0.4 June',
     TPL_OPTIONS_ALIASES: {
         tplError: 'error',
         tplGalleryArrows: 'gallery.arrows',
@@ -1556,6 +1556,9 @@ $.extend(MediaFetcher.prototype, {
                 if (!flag) {
                     return;
                 }
+                if (!item.tags) {
+                    item.tags = [];
+                }
                 switch (f.logic) {
                 case 'only':
                     if (f.type === 'user') {
@@ -2268,7 +2271,6 @@ $.extend(Popup.prototype, {
         if (self.core.instapi.client.isAlternativeApi() && !commentsList.length && commentsCount) {
             $content = $media.find('.instashow-popup-media-info-content');
             if (!$content.length) {
-                console.log(1);
                 $content = $('<div class="instashow-popup-media-info-content"></div>');
                 $content.appendTo($media.find('.instashow-popup-media-info'));
             }
@@ -3226,303 +3228,303 @@ views['style'] = Handlebars.template({
     ],
     'main': function (depth0, helpers, partials, data) {
         var helper, alias1 = helpers.helperMissing, alias2 = 'function', alias3 = this.escapeExpression;
-        return '<style type="text/css">\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        return '<style type="text/css">\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryBg || (depth0 != null ? depth0.colorGalleryBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryBg || (depth0 != null ? depth0.colorGalleryBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryBg',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-media-counter,\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-media-counter,\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-media-info-counter {\r\n        color: ' + alias3((helper = (helper = helpers.colorGalleryCounters || (depth0 != null ? depth0.colorGalleryCounters : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-media-info-counter {\n        color: ' + alias3((helper = (helper = helpers.colorGalleryCounters || (depth0 != null ? depth0.colorGalleryCounters : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryCounters',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-media-info-description {\r\n        color: ' + alias3((helper = (helper = helpers.colorGalleryDescription || (depth0 != null ? depth0.colorGalleryDescription : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-media-info-description {\n        color: ' + alias3((helper = (helper = helpers.colorGalleryDescription || (depth0 != null ? depth0.colorGalleryDescription : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryDescription',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-media-cover {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryOverlay || (depth0 != null ? depth0.colorGalleryOverlay : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-media-cover {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryOverlay || (depth0 != null ? depth0.colorGalleryOverlay : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryOverlay',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-scroll {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryScrollbar || (depth0 != null ? depth0.colorGalleryScrollbar : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-scroll {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryScrollbar || (depth0 != null ? depth0.colorGalleryScrollbar : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryScrollbar',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-scroll-slider {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryScrollbarSlider || (depth0 != null ? depth0.colorGalleryScrollbarSlider : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-scroll-slider {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryScrollbarSlider || (depth0 != null ? depth0.colorGalleryScrollbarSlider : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryScrollbarSlider',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsBg || (depth0 != null ? depth0.colorGalleryArrowsBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsBg || (depth0 != null ? depth0.colorGalleryArrowsBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryArrowsBg',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow:hover {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsBgHover || (depth0 != null ? depth0.colorGalleryArrowsBgHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow:hover {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsBgHover || (depth0 != null ? depth0.colorGalleryArrowsBgHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryArrowsBgHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow::before,\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow::before,\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow::after {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrows || (depth0 != null ? depth0.colorGalleryArrows : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow::after {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrows || (depth0 != null ? depth0.colorGalleryArrows : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryArrows',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow:hover::before,\r\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow:hover::before,\n    #instaShowGallery_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-gallery-control-arrow:hover::after {\r\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsHover || (depth0 != null ? depth0.colorGalleryArrowsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-gallery-control-arrow:hover::after {\n        background: ' + alias3((helper = (helper = helpers.colorGalleryArrowsHover || (depth0 != null ? depth0.colorGalleryArrowsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorGalleryArrowsHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-twilight {\r\n        background: ' + alias3((helper = (helper = helpers.colorPopupOverlay || (depth0 != null ? depth0.colorPopupOverlay : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-twilight {\n        background: ' + alias3((helper = (helper = helpers.colorPopupOverlay || (depth0 != null ? depth0.colorPopupOverlay : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupOverlay',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media {\r\n        background: ' + alias3((helper = (helper = helpers.colorPopupBg || (depth0 != null ? depth0.colorPopupBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media {\n        background: ' + alias3((helper = (helper = helpers.colorPopupBg || (depth0 != null ? depth0.colorPopupBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupBg',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-author {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupUsername || (depth0 != null ? depth0.colorPopupUsername : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-author {\n        color: ' + alias3((helper = (helper = helpers.colorPopupUsername || (depth0 != null ? depth0.colorPopupUsername : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupUsername',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-author:hover {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupUsernameHover || (depth0 != null ? depth0.colorPopupUsernameHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-author:hover {\n        color: ' + alias3((helper = (helper = helpers.colorPopupUsernameHover || (depth0 != null ? depth0.colorPopupUsernameHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupUsernameHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' a.instashow-popup-media-info-original {\r\n        border-color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLink || (depth0 != null ? depth0.colorPopupInstagramLink : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' a.instashow-popup-media-info-original {\n        border-color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLink || (depth0 != null ? depth0.colorPopupInstagramLink : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupInstagramLink',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLink || (depth0 != null ? depth0.colorPopupInstagramLink : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n        color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLink || (depth0 != null ? depth0.colorPopupInstagramLink : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupInstagramLink',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' a.instashow-popup-media-info-original:hover {\r\n        border-color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLinkHover || (depth0 != null ? depth0.colorPopupInstagramLinkHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' a.instashow-popup-media-info-original:hover {\n        border-color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLinkHover || (depth0 != null ? depth0.colorPopupInstagramLinkHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupInstagramLinkHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLinkHover || (depth0 != null ? depth0.colorPopupInstagramLinkHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n        color: ' + alias3((helper = (helper = helpers.colorPopupInstagramLinkHover || (depth0 != null ? depth0.colorPopupInstagramLinkHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupInstagramLinkHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-properties {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupCounters || (depth0 != null ? depth0.colorPopupCounters : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-properties {\n        color: ' + alias3((helper = (helper = helpers.colorPopupCounters || (depth0 != null ? depth0.colorPopupCounters : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupCounters',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-passed-time {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupPassedTime || (depth0 != null ? depth0.colorPopupPassedTime : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-passed-time {\n        color: ' + alias3((helper = (helper = helpers.colorPopupPassedTime || (depth0 != null ? depth0.colorPopupPassedTime : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupPassedTime',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-content {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupText || (depth0 != null ? depth0.colorPopupText : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-content {\n        color: ' + alias3((helper = (helper = helpers.colorPopupText || (depth0 != null ? depth0.colorPopupText : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupText',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-content a {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupAnchor || (depth0 != null ? depth0.colorPopupAnchor : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-content a {\n        color: ' + alias3((helper = (helper = helpers.colorPopupAnchor || (depth0 != null ? depth0.colorPopupAnchor : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupAnchor',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-info-content a:hover {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupAnchorHover || (depth0 != null ? depth0.colorPopupAnchorHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-info-content a:hover {\n        color: ' + alias3((helper = (helper = helpers.colorPopupAnchorHover || (depth0 != null ? depth0.colorPopupAnchorHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupAnchorHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow span::before,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow span::before,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow span::after,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow span::after,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close::before,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close::before,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close::after {\r\n        background: ' + alias3((helper = (helper = helpers.colorPopupControls || (depth0 != null ? depth0.colorPopupControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close::after {\n        background: ' + alias3((helper = (helper = helpers.colorPopupControls || (depth0 != null ? depth0.colorPopupControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupControls',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow:hover span::before,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow:hover span::before,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow:hover span::after,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow:hover span::after,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close:hover::before,\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close:hover::before,\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close:hover::after {\r\n        background: ' + alias3((helper = (helper = helpers.colorPopupControlsHover || (depth0 != null ? depth0.colorPopupControlsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close:hover::after {\n        background: ' + alias3((helper = (helper = helpers.colorPopupControlsHover || (depth0 != null ? depth0.colorPopupControlsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupControlsHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-video::before {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupControls || (depth0 != null ? depth0.colorPopupControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-video::before {\n        color: ' + alias3((helper = (helper = helpers.colorPopupControls || (depth0 != null ? depth0.colorPopupControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupControls',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-video:hover::before {\r\n        color: ' + alias3((helper = (helper = helpers.colorPopupControlsHover || (depth0 != null ? depth0.colorPopupControlsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-video:hover::before {\n        color: ' + alias3((helper = (helper = helpers.colorPopupControlsHover || (depth0 != null ? depth0.colorPopupControlsHover : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupControlsHover',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n    }\r\n\r\n    @media only screen and (max-width: 1024px) {\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n    }\n\n    @media only screen and (max-width: 1024px) {\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close {\r\n            background: ' + alias3((helper = (helper = helpers.colorPopupMobileControlsBg || (depth0 != null ? depth0.colorPopupMobileControlsBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close {\n            background: ' + alias3((helper = (helper = helpers.colorPopupMobileControlsBg || (depth0 != null ? depth0.colorPopupMobileControlsBg : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupMobileControlsBg',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n        }\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n        }\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow span::before,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow span::before,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow span::after,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow span::after,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close::before,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close::before,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close::after,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close::after,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow:hover span::before,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow:hover span::before,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-arrow:hover span::after,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-arrow:hover span::after,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close:hover::before,\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close:hover::before,\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-control-close:hover::after {\r\n            background: ' + alias3((helper = (helper = helpers.colorPopupMobileControls || (depth0 != null ? depth0.colorPopupMobileControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-control-close:hover::after {\n            background: ' + alias3((helper = (helper = helpers.colorPopupMobileControls || (depth0 != null ? depth0.colorPopupMobileControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupMobileControls',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n        }\r\n\r\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ';\n        }\n\n        #instaShowPopup_' + alias3((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'id',
             'hash': {},
             'data': data
-        }) : helper)) + ' .instashow-popup-media-video::before {\r\n            color: ' + alias3((helper = (helper = helpers.colorPopupMobileControls || (depth0 != null ? depth0.colorPopupMobileControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
+        }) : helper)) + ' .instashow-popup-media-video::before {\n            color: ' + alias3((helper = (helper = helpers.colorPopupMobileControls || (depth0 != null ? depth0.colorPopupMobileControls : depth0)) != null ? helper : alias1, typeof helper === alias2 ? helper.call(depth0, {
             'name': 'colorPopupMobileControls',
             'hash': {},
             'data': data
-        }) : helper)) + ';\r\n        }\r\n    }\r\n</style>';
+        }) : helper)) + ';\n        }\n    }\n</style>';
     },
     'useData': true
 });

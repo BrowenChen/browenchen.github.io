@@ -46,23 +46,41 @@
   border: 12px solid #ddd;
   border-radius: 50% 50%;
   box-shadow: 0 0 30px rgba(255,255,255,0.3);
-  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+          animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
   content: '';
 }
 .instashow-show .instashow-spinner::before {
   display: block;
-  animation: instashow-spinner 1.5s infinite;
+  -webkit-animation: instashow-spinner 1.5s infinite;
+          animation: instashow-spinner 1.5s infinite;
+}
+@-webkit-keyframes instashow-spinner {
+  0% {
+    border-width: initital;
+    opacity: 1;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    border-width: 1px;
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 @keyframes instashow-spinner {
   0% {
     border-width: initital;
     opacity: 1;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     border-width: 1px;
     opacity: 0;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 .instashow {
@@ -80,6 +98,7 @@
 .instashow a {
   text-decoration: none;
   color: #2196f3;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow a:hover {
@@ -126,8 +145,10 @@
   display: none;
   box-sizing: border-box;
   float: left;
-  transform-style: preserve-3d;
-  perspective: 900px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 900px;
+          perspective: 900px;
 }
 .instashow-gallery-view-active .instashow-gallery-media,
 .instashow-gallery-view-active-prev .instashow-gallery-media,
@@ -149,6 +170,7 @@
   right: 10px;
   font: normal 200%/1 'Iconsfont';
   color: rgba(255,255,255,0.7);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: '\e800';
 }
@@ -165,6 +187,7 @@
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .instashow-gallery-media-link:hover .instashow-gallery-media-cover {
@@ -172,7 +195,8 @@
   opacity: 1;
 }
 .instashow-gallery-media-link:hover .instashow-gallery-media-cover ~ .instashow-gallery-media-image {
-  transform: scaleX(1.1) scaleY(1.1) translateZ(0);
+  -webkit-transform: scaleX(1.1) scaleY(1.1) translateZ(0);
+          transform: scaleX(1.1) scaleY(1.1) translateZ(0);
 }
 .instashow-gallery-media-counter {
   display: block;
@@ -184,11 +208,13 @@
   right: 0;
   left: 0;
   opacity: 0;
-  transform: translateY(0%) scale(0.8);
+  -webkit-transform: translateY(0%) scale(0.8);
+          transform: translateY(0%) scale(0.8);
   font-size: 200%;
   text-align: center;
   line-height: 1;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 span.instashow-gallery-media-counter {
@@ -197,7 +223,8 @@ span.instashow-gallery-media-counter {
 .instashow-gallery-media-link:hover .instashow-gallery-media-counter {
   visibility: visible;
   opacity: 1;
-  transform: translateY(-50%) scale(1);
+  -webkit-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
 }
 .instashow-gallery-media-counter .instashow-icon {
   font-size: 160%;
@@ -212,7 +239,9 @@ span.instashow-gallery-media-counter {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transform: scaleX(1) scaleY(1) translateZ(0);
+  -webkit-transform: scaleX(1) scaleY(1) translateZ(0);
+          transform: scaleX(1) scaleY(1) translateZ(0);
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .instashow-gallery-media-loaded .instashow-gallery-media-image {
@@ -234,12 +263,14 @@ span.instashow-gallery-media-counter {
 .instashow-gallery-media-portrait .instashow-gallery-media-image img {
   width: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .instashow-gallery-media-album .instashow-gallery-media-image img {
   height: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .instashow-gallery-media-info {
   display: block;
@@ -251,19 +282,23 @@ span.instashow-gallery-media-counter {
   top: 50%;
   left: 50%;
   opacity: 0;
-  transform: translateX(-50%) translateY(-40%);
+  -webkit-transform: translateX(-50%) translateY(-40%);
+          transform: translateX(-50%) translateY(-40%);
   text-align: center;
   color: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-gallery-media-info-no-description {
-  transform: translateX(-50%) translateY(0%);
+  -webkit-transform: translateX(-50%) translateY(0%);
+          transform: translateX(-50%) translateY(0%);
   font-size: 120%;
 }
 .instashow-gallery-media-link:hover .instashow-gallery-media-info {
   visibility: visible;
   opacity: 1;
-  transform: translateX(-50%) translateY(-47%);
+  -webkit-transform: translateX(-50%) translateY(-47%);
+          transform: translateX(-50%) translateY(-47%);
 }
 .instashow-gallery-media-info-counter {
   line-height: 1;
@@ -298,6 +333,7 @@ span.instashow-gallery-media-counter {
   left: 0;
   opacity: 0;
   background: rgba(255,255,255,0.1);
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .instashow-gallery-loader.instashow-show {
@@ -310,7 +346,8 @@ span.instashow-gallery-media-counter {
   height: 100px;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 .instashow-gallery-control-arrow {
   position: absolute;
@@ -320,6 +357,7 @@ span.instashow-gallery-media-counter {
   top: 50%;
   border-radius: 50% 50%;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-gallery-control-arrow-disabled {
@@ -332,12 +370,14 @@ span.instashow-gallery-media-counter {
   position: absolute;
   height: 2px;
   width: 12px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: '';
 }
 .instashow-gallery-control-arrow-previous {
   left: 0;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 .instashow-gallery-control-arrow-previous::before,
 .instashow-gallery-control-arrow-previous::after {
@@ -346,19 +386,25 @@ span.instashow-gallery-media-counter {
   border-radius: 0 10px 10px 0;
 }
 .instashow-gallery-control-arrow-previous::before {
-  transform-origin: 0 110%;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 110%;
+          transform-origin: 0 110%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .instashow-gallery-control-arrow-previous::after {
-  transform-origin: 0 -10%;
-  transform: rotate(45deg);
+  -webkit-transform-origin: 0 -10%;
+          transform-origin: 0 -10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .instashow-gallery-control-arrow-previous:active {
-  transform: translate3d(-50%, -50%, 0) scale(0.9);
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(0.9);
+          transform: translate3d(-50%, -50%, 0) scale(0.9);
 }
 .instashow-gallery-control-arrow-next {
   right: 0;
-  transform: translate3d(50%, -50%, 0);
+  -webkit-transform: translate3d(50%, -50%, 0);
+          transform: translate3d(50%, -50%, 0);
 }
 .instashow-gallery-control-arrow-next::before,
 .instashow-gallery-control-arrow-next::after {
@@ -367,15 +413,20 @@ span.instashow-gallery-media-counter {
   border-radius: 10px 0 0 10px;
 }
 .instashow-gallery-control-arrow-next::before {
-  transform-origin: 100% 110%;
-  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 110%;
+          transform-origin: 100% 110%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .instashow-gallery-control-arrow-next::after {
-  transform-origin: 100% -10%;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: 100% -10%;
+          transform-origin: 100% -10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .instashow-gallery-control-arrow-next:active {
-  transform: translate3d(50%, -50%, 0) scale(0.9);
+  -webkit-transform: translate3d(50%, -50%, 0) scale(0.9);
+          transform: translate3d(50%, -50%, 0) scale(0.9);
 }
 .instashow-gallery-vertical .instashow-gallery-control-arrow {
   right: auto;
@@ -383,18 +434,22 @@ span.instashow-gallery-media-counter {
 }
 .instashow-gallery-vertical .instashow-gallery-control-arrow-previous {
   top: 0;
-  transform: rotate(90deg) translate3d(-50%, 50%, 0);
+  -webkit-transform: rotate(90deg) translate3d(-50%, 50%, 0);
+          transform: rotate(90deg) translate3d(-50%, 50%, 0);
 }
 .instashow-gallery-vertical .instashow-gallery-control-arrow-previous:active {
-  transform: rotate(90deg) translate3d(-50%, 50%, 0) scale(0.9);
+  -webkit-transform: rotate(90deg) translate3d(-50%, 50%, 0) scale(0.9);
+          transform: rotate(90deg) translate3d(-50%, 50%, 0) scale(0.9);
 }
 .instashow-gallery-vertical .instashow-gallery-control-arrow-next {
   top: auto;
   bottom: 0;
-  transform: rotate(90deg) translate3d(50%, 50%, 0);
+  -webkit-transform: rotate(90deg) translate3d(50%, 50%, 0);
+          transform: rotate(90deg) translate3d(50%, 50%, 0);
 }
 .instashow-gallery-vertical .instashow-gallery-control-arrow-next:active {
-  transform: rotate(90deg) translate3d(50%, 50%, 0) scale(0.9);
+  -webkit-transform: rotate(90deg) translate3d(50%, 50%, 0) scale(0.9);
+          transform: rotate(90deg) translate3d(50%, 50%, 0) scale(0.9);
 }
 .instashow-gallery-control-scroll {
   position: absolute;
@@ -402,6 +457,7 @@ span.instashow-gallery-media-counter {
   z-index: 10;
   opacity: 0;
   background: rgba(0,0,0,0.35);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-gallery-vertical .instashow-gallery-control-scroll {
@@ -423,6 +479,7 @@ span.instashow-gallery-media-counter {
 .instashow-gallery-control-scroll-slider {
   position: absolute;
   background: #000;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .instashow-gallery-vertical .instashow-gallery-control-scroll-slider {
@@ -439,6 +496,7 @@ span.instashow-gallery-media-counter {
   overflow: hidden;
 }
 .instashow-gallery-container {
+  -webkit-transition: all 0s linear;
   transition: all 0s linear;
 }
 .instashow-gallery-container::before,
@@ -494,6 +552,7 @@ span.instashow-gallery-media-counter {
   left: 0;
   opacity: 0;
   background: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-show .instashow-popup-twilight {
@@ -549,7 +608,8 @@ span.instashow-gallery-media-counter {
   height: 100px;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 .instashow-popup-media-picture img {
   display: block;
@@ -570,12 +630,14 @@ span.instashow-gallery-media-counter {
 .instashow-popup-media-has-comments.instashow-popup-media-portrait .instashow-popup-media-picture img {
   height: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .instashow-popup-media-has-comments.instashow-popup-media-album .instashow-popup-media-picture img {
   width: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .instashow-popup-media-video {
   position: relative;
@@ -592,15 +654,18 @@ span.instashow-gallery-media-counter {
   top: 50%;
   left: 50%;
   opacity: 0.8;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   font: normal 64px/1 'Iconsfont';
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: '\e800';
 }
 .instashow-playing .instashow-popup-media-video::before {
   visibility: visible;
   opacity: 0;
-  transform: translateX(-50%) translateY(-50%) scale(2);
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(2);
+          transform: translateX(-50%) translateY(-50%) scale(2);
 }
 div.instashow-popup-media-info {
   padding-top: 15px;
@@ -799,7 +864,8 @@ div.instashow-popup-media-info-comments-item {
     height: auto !important;
     position: static !important;
     top: auto !important;
-    transform: none !important;
+    -webkit-transform: none !important;
+            transform: none !important;
   }
   .instashow-popup-media-has-comments div.instashow-popup-media-info {
     width: 100%;
@@ -841,6 +907,7 @@ div.instashow-popup-media-info-comments-item {
   top: 0px;
   right: 68px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-popup-control-close::before,
@@ -853,19 +920,25 @@ div.instashow-popup-media-info-comments-item {
   left: 10px;
   border-radius: 10px;
   background: #fff;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: '';
 }
 .instashow-popup-control-close::before {
-  transform-origin: 0 50%;
-  transform: rotate(45deg);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .instashow-popup-control-close::after {
-  transform-origin: 100% 50%;
-  transform: translateX(-5px) rotate(-45deg);
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: translateX(-5px) rotate(-45deg);
+          transform: translateX(-5px) rotate(-45deg);
 }
 .instashow-popup-control-close:active {
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 @media only screen and (max-width: 1024px) {
   .instashow-popup-control-close {
@@ -884,7 +957,8 @@ div.instashow-popup-media-info-comments-item {
     height: 2px;
   }
   .instashow-popup-control-close::after {
-    transform: translateX(-5px) rotate(-45deg);
+    -webkit-transform: translateX(-5px) rotate(-45deg);
+            transform: translateX(-5px) rotate(-45deg);
   }
 }
 @media only screen and (max-width: 780px) {
@@ -904,13 +978,16 @@ div.instashow-popup-media-info-comments-item {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .instashow-popup-control-arrow.instashow-disabled {
   visibility: hidden;
   opacity: 0;
-  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
 }
 .instashow-popup-control-arrow span {
   display: block;
@@ -918,7 +995,9 @@ div.instashow-popup-media-info-comments-item {
   width: 20px;
   height: 40px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .instashow-popup-control-arrow span::before,
@@ -928,6 +1007,7 @@ div.instashow-popup-media-info-comments-item {
   width: 28px;
   height: 3px;
   top: 20px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: '';
 }
@@ -942,12 +1022,16 @@ div.instashow-popup-media-info-comments-item {
   border-radius: 0 10px 10px 0;
 }
 .instashow-popup-control-arrow-previous span::before {
-  transform-origin: 0 110%;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 110%;
+          transform-origin: 0 110%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .instashow-popup-control-arrow-previous span::after {
-  transform-origin: 0 -10%;
-  transform: rotate(45deg);
+  -webkit-transform-origin: 0 -10%;
+          transform-origin: 0 -10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .instashow-popup-control-arrow-next {
   right: 0;
@@ -961,21 +1045,28 @@ div.instashow-popup-media-info-comments-item {
   border-radius: 10px 0 0 10px;
 }
 .instashow-popup-control-arrow-next span::before {
-  transform-origin: 100% 110%;
-  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 110%;
+          transform-origin: 100% 110%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .instashow-popup-control-arrow-next span::after {
-  transform-origin: 100% -10%;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: 100% -10%;
+          transform-origin: 100% -10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .instashow-popup-control-arrow:hover span {
-  transform: translateY(-50%) scaleY(0.85);
+  -webkit-transform: translateY(-50%) scaleY(0.85);
+          transform: translateY(-50%) scaleY(0.85);
 }
 .instashow-popup-control-arrow:active.instashow-popup-control-arrow-previous span {
-  transform: translateY(-50%) scaleY(0.8) translateX(-30%);
+  -webkit-transform: translateY(-50%) scaleY(0.8) translateX(-30%);
+          transform: translateY(-50%) scaleY(0.8) translateX(-30%);
 }
 .instashow-popup-control-arrow:active.instashow-popup-control-arrow-next span {
-  transform: translateY(-50%) scaleY(0.8) translateX(30%);
+  -webkit-transform: translateY(-50%) scaleY(0.8) translateX(30%);
+          transform: translateY(-50%) scaleY(0.8) translateX(30%);
 }
 @media only screen and (max-width: 780px) {
   .instashow-popup-control-arrow {
@@ -1014,13 +1105,17 @@ div.instashow-popup-container {
   left: 50%;
   padding: 36px 100px;
   opacity: 0;
-  transform: translateX(-50%) scale(0.9);
+  -webkit-transform: translateX(-50%) scale(0.9);
+          transform: translateX(-50%) scale(0.9);
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .instashow-show div.instashow-popup-container {
   visibility: visible;
   opacity: 1;
-  transform: translateX(-50%) scale(1);
+  -webkit-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1);
+  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 @media only screen and (max-width: 780px) {
@@ -1048,7 +1143,8 @@ div.instashow-error-panel {
   max-width: 600px;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   border-radius: 4px;
 }
 .instashow-error-title {
