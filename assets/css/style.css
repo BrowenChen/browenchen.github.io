@@ -851,4 +851,7 @@
 		  transition: none !important;
 		}
 
+        #insta-words {
+            display: none;
+        }
 	}
