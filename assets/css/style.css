@@ -853,5 +853,6 @@
 
         #insta-words {
             display: none;
+            visibility: hidden !important;
         }
 	}
