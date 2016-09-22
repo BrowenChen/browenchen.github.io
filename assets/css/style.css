@@ -825,6 +825,10 @@
 			font-size: 12px;
 			padding-bottom: 10px;
 		}
+
+        #music-text {
+            font-size: 15px;
+        }
 	}
 
 
