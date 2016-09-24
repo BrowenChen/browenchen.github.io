@@ -37,7 +37,7 @@
                     <div class="headings">
                         <p id="nameAv">Owen Chen</p>
                         <p id="subtitle"> Music </p>
-                        <p id="subtitle"> Computer & Cognitive Sciences</p>
+                        <p id="subtitle"> Computer &amp; Cognitive Sciences</p>
                         <p id="email"> owenchen@berkeley.edu </p>
                     </div>
                     <br>
@@ -696,6 +696,35 @@
                     </div>
                     <!-- div col2 -->
                     <br>
+                </div>
+                <br>
+
+                <style>
+                    .featured-promo-container {
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    #promo-video {
+                        border: 1px solid #E6E9EC;
+                        border-radius: 4px; 
+                        /*box-shadow:0 0 2px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);  */
+                        box-shadow: 0 3px 8px rgba(0,0,0,.15);
+                    }
+
+                    @media screen and (max-width: 710px) {
+                        .featured-promo-container, #promo-video {
+                            display: none;
+                        }
+                    }
+                </style>
+                <!-- Featured Promo Video -->
+                <div class="row">
+                    <div class="featured-promo-container animated fadeIn _1">
+                        <iframe class="animated fadeIn _2 fade-up" width="560" height="315" src="https://www.youtube.com/embed/zzkdTOdDjFk" frameborder="0" allowfullscreen id="promo-video"></iframe>
+                    </div>
+
                 </div>
                 <br>
                 <!-- Soundcloud -->
