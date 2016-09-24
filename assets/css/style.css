@@ -447,6 +447,15 @@
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
 	}
+
+	#three a {
+		color: #ecf0f1;
+	}
+	
+	#three a:hover {
+		text-decoration: none;
+		opacity: .65;
+	}
 	
 
 	.contact-headline {
