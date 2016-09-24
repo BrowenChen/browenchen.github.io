@@ -934,7 +934,7 @@
                                 <textarea name="message" id="message" rows="5"></textarea>
                             </div>
                             <ul class="actions">
-                                <li><a href="" class="button submit" onclick="alertSubmit()" id="sendButton">Send Message</a>
+                                <li><a class="button" onclick="mailTo()" id="sendButton">Send Message</a>
                                 </li>
                             </ul>
                         </form>
@@ -1846,6 +1846,13 @@
         <script src="assets/js/main.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script>
+            var mailTo = function() {
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+                document.location.href="mailto:owenchen@berkeley.edu?subject=" + name + "&body=" + message;
+            }
+
             var alertSubmit = function() {
                 alert("Sorry! Hasn't been implemented yet - email owenchen@berkeley.edu to get in touch!");
             }
