@@ -2643,6 +2643,14 @@
 					color: #953d75;
 				}
 
+				.wrapper.style4 .icon.major:before {
+					color: #283E4A;
+				}
+
+				.wrapper.style4-alt .icon.major:before {
+					color: #5C6F7C;
+				}				
+
 /* Image */
 
 	.image {
@@ -3351,6 +3359,15 @@
 		.wrapper.style3-alt {
 			background-color: #953d75;
 		}
+
+		.wrapper.style4 {
+			/*background-color: #b74e91;*/
+			background-color: #283E4A;
+		}
+
+		.wrapper.style4-alt {
+			background-color: #5C6F7C;
+		}		
 
 		.wrapper.fullscreen {
 			display: -moz-flex;
