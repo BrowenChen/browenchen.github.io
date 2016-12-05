@@ -230,7 +230,8 @@
 
     @media screen and (max-width: 710px) {
         .featured-promo-container, #promo-video {
-            display: none;
+            position: relative;
+            width: 95%;
         }
     }
 
