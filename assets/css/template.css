@@ -1873,6 +1873,16 @@ blockquote cite{
 	padding-bottom: 20px;
 }
 
+/*Featured Instagram section*/
+.instagram-featured {
+	padding: 0;
+}
+
+.edm-featured {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+}
 
 /*Gigs*/
 
