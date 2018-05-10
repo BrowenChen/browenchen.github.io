@@ -1189,6 +1189,12 @@ blockquote cite{
 	}
 
 }
+
+@media (max-width: 500px) {
+    .module-hero {
+        background-image: url('../imgs/Ibanez_sm.jpg') !important;
+    }
+}
 /*!------------------------------------------------------------------
 [Modules]
 */
