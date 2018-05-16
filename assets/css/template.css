@@ -1070,10 +1070,10 @@ blockquote cite{
 .module-hero{
 	position:relative;
 	overflow:hidden;
-    background-image: url('Ibanez.jpg');
-	background-attachment:fixed;
-	background-repeat:no-repeat;
-	background-position:center center;
+    background-image: url('IbanezSco.jpg');
+	/*background-attachment:fixed;
+	*/
+    background-repeat:no-repeat;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -1192,7 +1192,7 @@ blockquote cite{
 
 @media (max-width: 500px) {
     .module-hero {
-        background-image: url('../imgs/Ibanez_sm.jpg') !important;
+        background-image: url('../imgs/IbanezSco_mobile.jpg') !important;
     }
 }
 /*!------------------------------------------------------------------
