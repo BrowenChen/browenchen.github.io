@@ -552,7 +552,20 @@ He is now actively producing, creating, and growing his online Instagram communi
 											<div class="col-sm-4 gallery-item">
 												<div class="gallery-icon store-item-container">
 													<h3 class="store-item-title"> Can't Help Falling In Love [TABs] </h3>
-                                                    <p> <a href="https://www.instagram.com/p/Bng7sIpnHxf" target="_blank" style="color: #006097;">Link to original video </a>
+                                                    <p> <span id="clicker" style="color: #006097;" onclick="open_win()">Link to original video </span>
+
+													<!-- Annoying hack to get around popup issue-->
+													<script>
+													function open_win() 
+													{
+													window.open("https://www.instagram.com/p/Bng7sIpnHxf");
+													}
+													</script>
+													<style>
+														#clicker:hover {cursor: pointer;}
+													</style>
+													<!-- Annoying hack to get around popup issue-->
+
                                                     <br>Included is a link to TABs and mp3 of this arrangement. </p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
