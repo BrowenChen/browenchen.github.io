@@ -2008,6 +2008,7 @@ blockquote cite{
 
 .gigs-container {
 	position: relative;
+    width: 100%;
 	overflow: scroll;
 	background-color: #F3F6F8;
 	padding: 15px;
@@ -2030,6 +2031,7 @@ blockquote cite{
 @media (max-width: 767px) {
 	.gigs-container {
 		height: 528px;
+        width: 100%;
 	}
 }
 
