@@ -2033,6 +2033,12 @@ blockquote cite{
 		height: 528px;
         width: 100%;
 	}
+
+	.featured-youtube-column {
+		width: 100% !important; 
+		height: 98% !important;
+		padding: 5px !important;
+	}
 }
 
 .row-margin {
