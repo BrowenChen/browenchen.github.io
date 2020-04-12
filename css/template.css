@@ -2050,6 +2050,11 @@ blockquote cite{
 }
 /**/
 
+@media (min-width: 1200px) {
+	.container {
+    	width: 90% !important;
+	}
+}
 
 
 

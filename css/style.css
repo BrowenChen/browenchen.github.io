@@ -2636,3 +2636,11 @@ ul.icons li:hover {
 	}
 }
 
+/*Override some bootstrap container issue*/
+@media (min-width: 992px) {
+	.container {
+    	width: 90% !important;
+	}
+}
+
+
