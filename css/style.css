@@ -831,7 +831,7 @@ img.svg{
 }
 .arlo_tm_skills_wrap{
 	background-color: #f6f7fd;
-	padding: 90px 0px;
+	padding: 45px 0px;
 	margin-bottom: 100px;
 }
 .arlo_tm_skills_wrap .inner_wrap{display: flex;}
@@ -2543,6 +2543,11 @@ img.svg{
 #gigs-module {
 	/*background-color: #E1E9EE;*/
 	padding: 20px;
+}
+
+#album {
+	background-color: #F8F8F8;
+	margin-bottom: 0px !important;
 }
 
 @media (min-width: 767px) {
