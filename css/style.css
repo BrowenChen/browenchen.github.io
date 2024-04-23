@@ -670,7 +670,7 @@ img.svg{
 			box-sizing: border-box; /* Opera/IE 8+ */ 
 }
 .arlo_tm_about_wrap .leftbox{
-	width: 35%;
+	width: 50%;
 	float: left;
 	height: auto;
 	padding-right: 40px;
@@ -705,7 +705,7 @@ img.svg{
 }
 .arlo_tm_about_wrap .leftbox .about_image_wrap img{opacity: 0;}
 .arlo_tm_about_wrap .rightbox{
-	width: 65%;
+	width: 50%;
 	float: right;
 	padding: 0px 0px 0px 65px;
 	
@@ -2394,6 +2394,7 @@ img.svg{
 }	
 
 /*Custom Styles*/
+
 
 .insta-mid {
 	text-align: center;
