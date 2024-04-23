@@ -2427,10 +2427,14 @@ img.svg{
 }
 
 .youtube-feature {
-	padding-top: 75px;
+	padding-top: 15px;
 	margin: 0 auto;
 	text-align: center;
 
+}
+
+#youtube-featured-row {
+	padding-bottom: 25px;
 }
 
 /*GIGS*/
