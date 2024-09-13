@@ -5769,12 +5769,39 @@
                                   .instagram-container {
                                       display: flex;
                                       flex-wrap: wrap;
-                                      gap: 20px;
+                                      gap: 30px;
+                                      justify-content: space-between;
                                   }
 
                                   .instagram-post {
-                                      width: 400px; /* Adjust as needed */
+                                      flex: 1 1 150px; /* Make posts flexible and start with a base width */
+                                       box-sizing: border-box;
+                                      width: 150px;
+                                       margin: 10px 0;                                      
                                   }
+
+
+                                  @media (max-width: 1400px) {
+                                      .instagram-post {
+                                          flex-basis: 450%;
+                                          max-width: 40%;
+                                      }
+                                  }
+
+                                  @media (max-width: 900px) {
+                                      .instagram-post {
+                                          flex-basis: 45%; 
+                                          max-width: 45%;
+                                      }
+                                  }
+
+                                  @media (max-width: 550px) {
+                                      .instagram-post {
+                                          flex-basis: 100%; 
+                                          max-width: 100%;
+                                      }
+                                  }    
+                                                  
                               </style>
 
 
